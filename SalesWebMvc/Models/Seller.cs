@@ -6,7 +6,7 @@ namespace SalesWebMvc.Models
 {
     public class Seller
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; } = Guid.NewGuid();
         public string Name { get; set; }
         public string Email { get; set; }
         public DateTime BirthDate { get; set; }
@@ -18,7 +18,7 @@ namespace SalesWebMvc.Models
         {
         }
 
-        public Seller(int id, string name, string email, DateTime birthDate, double baseSalary, Department department)
+        public Seller(Guid id, string name, string email, DateTime birthDate, double baseSalary, Department department)
         {
             Id = id;
             Name = name;
